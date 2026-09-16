@@ -1,0 +1,13 @@
+{
+  "name": "iot-http-server",
+  "version": "1.0.0",
+  "description": "HTTP server for ESP32 DHT22 IoT project",
+  "main": "http_server.js",
+  "scripts": {
+    "start": "node http_server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "mqtt": "^5.10.4"
+  }
+}
