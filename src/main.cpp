@@ -38,7 +38,7 @@ const char *MQTT_TOPIC =
 // URL hien tai cua localtunnel
 // Them /data vi server nhan POST tai endpoint /data
 const char *HTTP_SERVER_URL =
-    "https://fair-olives-bathe.loca.lt/data";
+    "https://iot-5-project-mqtt-http-1.onrender.com/data";
 
 // =======================
 // OBJECT
