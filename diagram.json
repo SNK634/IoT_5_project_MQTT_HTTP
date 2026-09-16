@@ -22,12 +22,14 @@
     }
   ],
   "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
     ["esp:3V3", "dht1:VCC", "red", []],
     ["esp:GND.1", "dht1:GND", "black", []],
     ["esp:15", "dht1:SDA", "green", []]
   ],
   "serialMonitor": {
-  "display": "always",
+  "display": "terminal",
   "newline": "lf"
 },
   "dependencies": {}
