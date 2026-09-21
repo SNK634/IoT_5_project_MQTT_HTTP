@@ -1,0 +1,14 @@
+{
+  "name": "iot-server",
+  "version": "1.0.0",
+  "description": "HTTP and MQTT server for ESP32 IoT project",
+  "main": "http_server.js",
+  "scripts": {
+    "start": "node http_server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.1.0",
+    "mqtt": "^5.13.1"
+  }
+}
