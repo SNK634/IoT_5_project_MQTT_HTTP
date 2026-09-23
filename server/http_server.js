@@ -5,7 +5,6 @@ const cors = require("cors");
 
 const app = express();
 
-const PORT = process.env.PORT || 3000;
 const DATA_DIR = path.join(__dirname, "data");
 const DATA_FILE = path.join(DATA_DIR, "http_data.json");
 
@@ -64,10 +63,26 @@ app.get("/data", (req, res) => {
 app.post("/data", (req, res) => {
   const body = req.body;
 
+  // Kiem tra du lieu bat buoc
+  if (
+    body.sample_id == null ||
+    body.temperature == null ||
+    body.humidity == null
+  ) {
+    console.log("====================");
+    console.log("HTTP DATA KHONG HOP LE");
+    console.log(body);
+
+    return res.status(400).json({
+      status: "error",
+      message: "Thieu sample_id, temperature hoac humidity"
+    });
+  }
+
   const item = {
-    sample_id: body.sample_id ?? null,
-    temperature: body.temperature ?? null,
-    humidity: body.humidity ?? null,
+    sample_id: body.sample_id,
+    temperature: body.temperature,
+    humidity: body.humidity,
     protocol: body.protocol ?? "HTTP",
     send_time: body.send_time ?? null,
     received_time: new Date().toISOString()
@@ -98,6 +113,8 @@ app.delete("/data", (req, res) => {
   });
 });
 
-app.listen(PORT, () => {
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, "0.0.0.0", () => {
   console.log(`HTTP Server running at port ${PORT}`);
 });
