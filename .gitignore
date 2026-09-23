@@ -1,8 +1,5 @@
-node_modules/
+﻿node_modules/
+server/node_modules/
 .env
-server/data/*.csv
-results/*.xlsx
 .DS_Store
-.vscode/.pio/
-.pio/
 .vscode/
