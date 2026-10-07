@@ -1,0 +1,21 @@
+﻿[
+  {
+    "protocol": "MQTT",
+    "topic": "iot/demo/temperature",
+    "message": "NHIET DO: 55 C | CANH BAO NONG | Mau: 7"
+  },
+  {
+    "protocol": "MQTT",
+    "topic": "iot/demo/humidity",
+    "message": "DO AM: 42 % | CANH BAO KHO | Mau: 7"
+  },
+  {
+    "protocol": "HTTP",
+    "endpoint": "POST /data",
+    "sample_id": 101,
+    "temperature": 48,
+    "humidity": 45,
+    "alert_temperature": "CANH BAO NONG",
+    "alert_humidity": "CANH BAO KHO"
+  }
+]

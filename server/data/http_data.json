@@ -27,5 +27,13 @@
     "protocol": "LOCAL_RENDER_TEST",
     "send_time": null,
     "received_time": "2026-08-15T16:21:34.638Z"
+  },
+  {
+    "sample_id": 1,
+    "temperature": 30,
+    "humidity": 70,
+    "protocol": "LOCAL_TEST",
+    "send_time": null,
+    "received_time": "2026-10-07T12:59:22.956Z"
   }
 ]
